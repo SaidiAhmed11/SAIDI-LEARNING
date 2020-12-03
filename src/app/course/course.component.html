@@ -1,0 +1,27 @@
+
+  <div class="course-item" >
+    <img src="/assets/elearning/img/{{course.image}}" class="img-fluid" alt="...">
+    <div class="course-content">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>{{course.category}}</h4>
+        <p class="price">$ {{course.price}}</p>
+      </div>
+
+      <h3><a href="course-details.html">{{course.courseName}}</a></h3>
+      <p>{{course.description}}</p>
+      <button class="get-started-btn" >Participate</button>
+      <div class="trainer d-flex justify-content-between align-items-center">
+        <div class="trainer-profile d-flex align-items-center">
+
+        </div>
+        <div class="trainer-rank d-flex align-items-center">
+          <i class="bx bx-user"></i>&nbsp;{{course.mumbParticipants}}
+          &nbsp;&nbsp;
+          <i class="bx bx-heart"></i>&nbsp;{{course.likes}}
+          <button class="get-started-btn" (click)="sendlike()"> Like </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+

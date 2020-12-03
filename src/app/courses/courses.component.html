@@ -1,0 +1,23 @@
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <h2>Courses</h2>
+      <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Courses Section ======= -->
+  <section id="courses" class="courses">
+    <div class="container" >
+
+      <div class="row" style="flex-wrap: wrap;display:flex;justify-content: space-around">
+        <div  *ngFor="let c of coursesList; let i=index" class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <app-course [course]="c" (like)="LikeCourses($event)"></app-course>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
