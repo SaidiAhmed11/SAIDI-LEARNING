@@ -24,7 +24,7 @@ export class CourseManagementComponent implements OnInit {
 
   delete(c : Course)
   {
-    this.coursesService.deleteProduct(c).subscribe(next=>this.coursesService.getCoursesJson().subscribe(next=>this.searchCourses=next));
+    this.coursesService.deleteCourse(c).subscribe(next=>this.coursesService.getCoursesJson().subscribe(next=>this.searchCourses=next));
   }
 
 

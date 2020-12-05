@@ -89,7 +89,7 @@
                 <div class="col-sm-9">
                 <textarea class="form-control" name="description" rows="4"
                           [ngClass]="[description.touched  ? 'form-control' : '',description.errors?.required ? 'form-control' : 'form-control is-valid',description.errors?.minlength ? 'form-control' : '',((description.errors?.minlength) || (description.touched) && (description.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
-                          [(ngModel)]="course.description" #description="ngModel" required minlength="20" maxlength="60"></textarea>
+                          [(ngModel)]="course.description" #description="ngModel" required minlength="20" ></textarea>
                   <div class="invalid-feedback" *ngIf="description.touched && description?.errors?.required" >Description Name is required</div>
                   <div class="invalid-feedback" *ngIf="description?.errors?.minlength" >Minmum 20 caracters</div>
                 </div>
@@ -101,7 +101,7 @@
                 <label class="col-sm-3 form-control-label">Category</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" name="category"
-                         [ngClass]="[id.touched  ? 'form-control' : '',category.errors?.required ? 'form-control' : 'form-control is-valid',((category.touched) && (category.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
+                         [ngClass]="[category.touched  ? 'form-control' : '',category.errors?.required ? 'form-control' : 'form-control is-valid',((category.touched) && (category.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
                          [(ngModel)]="course.category" #category="ngModel" required>
                   <div class="invalid-feedback" *ngIf="category.touched && category?.errors?.required" >Category is required</div>
 

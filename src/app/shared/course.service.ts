@@ -31,15 +31,21 @@ export class CourseService {
     return this.httpClient.post<Course>(this.urlCourse, course, this.httpOptions);
   }
 
-  deleteProduct (course: Course | number): Observable<Course>
+  deleteCourse (course: Course | number): Observable<Course>
   {
     const id = typeof course === 'number' ? course : course.id;
     const url=this.urlCourse+'/'+id;
     return this.httpClient.delete<Course>(url);
   }
 
-  updateProduct(id :number,course : Course) : Observable<Course>
+  updateCourse(id :number,course : Course) : Observable<Course>
   {
+    return this.httpClient.put<Course>(this.urlCourse+'/'+id ,course,this.httpOptions);
+  }
+
+  public updateProductwithimage(id :number,course : Course,fileToUpload: File) : Observable<Course>
+  {
+    course.image=fileToUpload.name;
     return this.httpClient.put<Course>(this.urlCourse+'/'+id ,course,this.httpOptions);
   }
 

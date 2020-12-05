@@ -4,12 +4,14 @@
     <div class="course-content">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h4>{{course.category}}</h4>
+        <span class="badge badge-danger" *ngIf="course.mumbParticipants>=course.seats">No Available Seats</span>
         <p class="price">$ {{course.price}}</p>
       </div>
 
-      <h3><a href="course-details.html">{{course.courseName}}</a></h3>
+      <h3><a [routerLink]="['/elearning/courses/detail',course.id]">{{course.courseName}}</a></h3>
       <p>{{course.description}}</p>
-      <button class="get-started-btn" >Participate</button>
+      <button [hidden]="participated" class="get-started-btn" (click)="Participate()" [disabled]="course.mumbParticipants>=course.seats">Participate</button>
+      <button  *ngIf="participated" class="get-started-btn" (click)="Cancel()" >Cancel</button>
       <div class="trainer d-flex justify-content-between align-items-center">
         <div class="trainer-profile d-flex align-items-center">
 

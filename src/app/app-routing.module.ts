@@ -8,12 +8,17 @@ import {CoursesComponent} from './courses/courses.component';
 import {AddCourseComponent} from './add-course/add-course.component';
 import {CourseManagementComponent} from './course-management/course-management.component';
 import {UpdateCourseComponent} from './update-course/update-course.component';
+import {CourseDetailComponent} from './course-detail/course-detail.component';
 
 const routes: Routes = [
   {path : "elearning" , component:ElearningComponent,children:
     [
       {path : "home" , component:HomeComponent},
-      {path : "courses" , component:CoursesComponent},
+      {path : "courses" , component:CoursesComponent,children:
+        [
+          {path : "detail/:id" , component:CourseDetailComponent},
+        ]
+      },
     ]
   },
   {path : "login" , component:LoginComponent},

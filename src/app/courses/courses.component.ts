@@ -22,7 +22,7 @@ export class CoursesComponent implements OnInit {
   LikeCourses(c: Course)
   {
     c.likes++;
-    this.coursesService.updateProduct(c.id,c).subscribe(res=>res=>this.router.navigateByUrl("/elearning/courses"));
+    this.coursesService.updateCourse(c.id,c).subscribe(res=>res=>this.router.navigateByUrl("/elearning/courses"));
 
   }
 

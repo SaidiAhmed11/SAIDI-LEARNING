@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ef313d-6760-4e49-b932-6aac5abba4bd" name="Default Changelist" comment="" />
+    <list default="true" id="9c9e3b85-60b8-4ade-b836-dcf552c6fcee" name="Default Changelist" comment="COMMIT 2">
+      <change afterPath="$PROJECT_DIR$/src/app/course-management/course-management.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1lA5511K72XYuPdd5ZY3u4nfL0Q" />
+  <component name="ProjectId" id="1kw6pxdrFs9k2myeDx7h6SVj1bc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,21 +30,163 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="ts.external.directory.path" value="C:\WorkSpace\workshop-saidi-ahmed\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WorkSpace\workshop-saidi-ahmed\src\app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\WorkSpace\workshop-saidi-ahmed\src\assets\admin" />
+      <recent name="C:\WorkSpace\workshop-saidi-ahmed\src\assets\elearning" />
+      <recent name="C:\WorkSpace\workshop-saidi-ahmed\src\assets\login" />
+      <recent name="C:\WorkSpace\workshop-saidi-ahmed\src\app\model" />
+      <recent name="C:\WorkSpace\workshop-saidi-ahmed\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (workshop-saidi-ahmed)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (workshop-saidi-ahmed)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="28ef313d-6760-4e49-b932-6aac5abba4bd" name="Default Changelist" comment="" />
-      <created>1607026868312</created>
+      <changelist id="9c9e3b85-60b8-4ade-b836-dcf552c6fcee" name="Default Changelist" comment="" />
+      <created>1606599492764</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607026868312</updated>
-      <workItem from="1607026869429" duration="50000" />
+      <updated>1606599492764</updated>
+      <workItem from="1606599493943" duration="6429000" />
+      <workItem from="1606639896268" duration="22289000" />
+      <workItem from="1606862422399" duration="1360000" />
+      <workItem from="1606903553254" duration="23285000" />
+      <workItem from="1607008342227" duration="18186000" />
+      <workItem from="1607095974216" duration="2454000" />
+      <workItem from="1607110480692" duration="7189000" />
+      <workItem from="1607119447979" duration="7621000" />
+      <workItem from="1607167183304" duration="13041000" />
+      <workItem from="1607183429179" duration="5556000" />
+      <workItem from="1607202549788" duration="3910000" />
     </task>
+    <task id="LOCAL-00001" summary="COMMIT 2">
+      <created>1607027450604</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607027450604</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="COMMIT 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMMIT 2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="551" y="275" key="#TSLint" timestamp="1606600141879">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="551" y="275" key="#TSLint/0.0.1366.728@0.0.1366.728" timestamp="1606600141879" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607122777206">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607122777206" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607027083139">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607027083139" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1607208062370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607208062370" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1607208062369">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607208062369" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1607208062368">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607208062368" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1607208062370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607208062370" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1607028374262">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607028374262" />
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1607027536394">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607027536394" />
+    <state x="390" y="68" width="585" height="592" key="find.popup" timestamp="1606605097747">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="68" width="585" height="592" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1606605097747" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1606934565690">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606934565690" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606652758911">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606652758911" />
   </component>
 </project>

@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "lastname": "ahmed",
+      "firsttname": "saidi",
+      "username": "ahmedsaidi11",
+      "email": "ahmed.saidi@esprit.tn",
+      "role": "Admin",
+      "password": "ahmed",
+      "logged": false
+    },
+    {
+      "id": 2,
+      "lastname": "ines",
+      "firsttname": "ben amor",
+      "username": "inesbenamor",
+      "email": "ines.benamor@esprit.tn",
+      "role": "User",
+      "password": "ines",
+      "logged": false
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "courseName": "Website Design",
+      "price": 169,
+      "mumbParticipants": 9,
+      "seats": 30,
+      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
+      "category": "Web Development",
+      "image": "course-1.jpg",
+      "likes": 11
+    },
+    {
+      "id": 2,
+      "courseName": "Search Engine Optimization",
+      "price": 250,
+      "mumbParticipants": 9,
+      "seats": 46,
+      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
+      "category": "Marketing",
+      "image": "course-2.jpg",
+      "likes": 12
+    },
+    {
+      "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "id": 3,
+      "courseName": "Website Design",
+      "seats": 66,
+      "price": "250",
+      "category": "Web",
+      "image": "course-3.jpg",
+      "mumbParticipants": 66,
+      "likes": 1
+    }
+  ],
+  "participation": []
+}

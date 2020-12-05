@@ -55,7 +55,7 @@
                   <td>{{c.mumbParticipants}} / {{c.seats}}</td>
                   <td>{{c.likes}}</td>
                   <button type="button" class="btn btn-outline-danger" (click)="delete(c)">Delete</button>
-                  <button type="button" class="btn btn-outline-secondary" [routerLink]="['admin/update',c.id]">Update</button>
+                  <button type="button" class="btn btn-outline-secondary" [routerLink]="['/admin/update',c.id]">Update</button>
 
                 </tr>
 

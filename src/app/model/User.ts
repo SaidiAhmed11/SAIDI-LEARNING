@@ -1,4 +1,5 @@
 import {Role} from './Role';
+import {Course} from './Course';
 
 export class User{
   id:number;
