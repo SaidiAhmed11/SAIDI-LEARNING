@@ -11,12 +11,11 @@ import {Router} from '@angular/router';
 })
 export class CoursesComponent implements OnInit {
   coursesList:Course[];
-  constructor(private  coursesService:CourseService,private router:Router) {
-
-  }
+  searchCourses:Course[];
+  constructor(private  coursesService:CourseService,private router:Router) { }
 
   ngOnInit(): void {
-    this.coursesService.getCoursesJson().subscribe(res=>this.coursesList=res);
+    this.coursesService.getCoursesJson().subscribe(res=>{this.searchCourses=this.coursesList=res});
   }
 
   LikeCourses(c: Course)
@@ -24,6 +23,10 @@ export class CoursesComponent implements OnInit {
     c.likes++;
     this.coursesService.updateCourse(c.id,c).subscribe(res=>res=>this.router.navigateByUrl("/elearning/courses"));
 
+  }
+
+  search(query : any){
+    this.searchCourses = (query) ? this.coursesList.filter(course=>course.courseName.toLowerCase().includes(query.toLowerCase()) ||course.category.toLowerCase().includes(query.toLowerCase())) : this.coursesList;
   }
 
 

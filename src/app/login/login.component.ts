@@ -12,6 +12,8 @@ import {Role} from '../model/Role';
 export class LoginComponent implements OnInit {
   user:User= new User();
   userTest:User=new User();
+  showAlert=false;
+
   constructor( private route: ActivatedRoute,
                private router: Router,
                private userService : UserService)
@@ -38,12 +40,27 @@ export class LoginComponent implements OnInit {
         }
       }
     );*/
+    if (localStorage.getItem("id")==null){
+      this.router.navigateByUrl("/login")
+    }
+    else
+    {
+      if(localStorage.getItem("role")=="Admin")
+      {
+        this.router.navigateByUrl("/admin")
+
+      }
+      else if(localStorage.getItem("role")=="User")
+      {this.router.navigateByUrl("/elearning/home")
+       }
+
+    }
 
   }
 
   login()
   {
-    this.userService.login(this.user.username,this.user.password).subscribe(res=>this.userTest=res);
+   /* this.userService.login(this.user.username,this.user.password).subscribe(res=>this.userTest=res);
     if(this.userTest==null)
     {
       this.router.navigateByUrl("/login");
@@ -53,7 +70,36 @@ export class LoginComponent implements OnInit {
         {
           this.router.navigateByUrl("/admin");
 
+      }*/
+
+    this.userService.getUsersJson().subscribe(res=>{
+      for(let i in res)
+      {
+        if(this.user.username==res[i].username && this.user.password == res[i].password && res[i].role=="Admin")
+        {
+
+            localStorage.setItem('id',res[i].id.toString());
+            localStorage.setItem('role',this.user.role);
+            console.log("admin");
+            this.router.navigateByUrl("/admin");
+
+          }
+          else if (this.user.username==res[i].username && this.user.password == res[i].password && res[i].role=="User")
+          {
+            localStorage.setItem('id',res[i].id.toString());
+            localStorage.setItem('role',this.user.role);
+            console.log("user");
+            this.router.navigateByUrl("/elearning/home");
+          }
+        else {
+          this.showAlert=true;
+
+        }
       }
+
+    });
+
+
   }
 
 }

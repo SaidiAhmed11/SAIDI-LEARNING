@@ -55,8 +55,37 @@ export class UserService {
 
   login(username:string,password:string): Observable<User>
   {
-    return this.httpClient.get<User>(this.urlUsers +'?username='+ username+'&password='+password);
+    return this.httpClient.get<User>(this.urlUsers);
   }
+
+  Authentification(user:User)
+  {
+    this.getUsersJson().subscribe(res=>{
+      for(let i in res)
+      {
+        if(user.username==res[i].username && user.password == res[i].password)
+        {
+            if(res[i].role=="Admin")
+            {
+              console.log("admin");
+              return "admin"
+            }
+            else
+            {
+              console.log("user");
+              return "user"
+            }
+        }
+        else {
+          console.log("mafamech");
+          return "";
+        }
+      }
+
+    });
+
+  }
+
   public userLoggedIn(): Observable<User>
   {
     return this.httpClient.get<User>(this.urlUsers +'?logged='+true);

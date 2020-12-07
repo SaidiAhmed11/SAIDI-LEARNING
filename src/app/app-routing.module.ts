@@ -9,11 +9,14 @@ import {AddCourseComponent} from './add-course/add-course.component';
 import {CourseManagementComponent} from './course-management/course-management.component';
 import {UpdateCourseComponent} from './update-course/update-course.component';
 import {CourseDetailComponent} from './course-detail/course-detail.component';
+import {MyCoursesComponent} from './my-courses/my-courses.component';
+import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
   {path : "elearning" , component:ElearningComponent,children:
     [
       {path : "home" , component:HomeComponent},
+      {path : "mycourses" , component:MyCoursesComponent},
       {path : "courses" , component:CoursesComponent,children:
         [
           {path : "detail/:id" , component:CourseDetailComponent},
@@ -21,7 +24,7 @@ const routes: Routes = [
       },
     ]
   },
-  {path : "login" , component:LoginComponent},
+  {path : "login" , canActivate:[AuthGuard],component:LoginComponent},
   {path : "admin" , component:AdminComponent,children:
     [
       {path : "add" , component:AddCourseComponent},
@@ -30,7 +33,7 @@ const routes: Routes = [
     ]
   },
 
-  {path:'',redirectTo:'elearning/home', pathMatch: 'full' },
+  {path:'',redirectTo:'login', pathMatch: 'full' },
 
 
 ];

@@ -11,5 +11,8 @@ export class ElearningComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  logout()
+  {
+    localStorage.clear();
+  }
 }

@@ -47,6 +47,7 @@ export class CourseComponent implements OnInit {
     this.participation.description=this.course.description;
     this.participation.image=this.course.image;
     this.participation.category=this.course.category;
+
     this.participated=true;
     this.participationService.addParticipation(this.participation).subscribe(res=>this.courseService.updateCourse(this.course.id,this.course).subscribe(next=>this.participationService.getParticipations().subscribe(res=>this.participatedUsers=res)));
 

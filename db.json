@@ -12,21 +12,22 @@
     },
     {
       "id": 2,
-      "lastname": "ines",
-      "firsttname": "ben amor",
-      "username": "inesbenamor",
-      "email": "ines.benamor@esprit.tn",
+      "lastname": "ahmed",
+      "firsttname": "saidi",
+      "username": "ahmedsaidi",
+      "email": "ahmed.saidi@esprit.tn",
       "role": "User",
-      "password": "ines",
+      "password": "ahmed",
       "logged": false
     }
+
   ],
   "courses": [
     {
       "id": 1,
       "courseName": "Website Design",
       "price": 169,
-      "mumbParticipants": 9,
+      "mumbParticipants": 10,
       "seats": 30,
       "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
       "category": "Web Development",
@@ -56,5 +57,15 @@
       "likes": 1
     }
   ],
-  "participation": []
+  "participation": [
+    {
+      "idUser": 2,
+      "idCourse": 1,
+      "courseName": "Website Design",
+      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
+      "image": "course-1.jpg",
+      "category": "Web Development",
+      "id": 1
+    }
+  ]
 }

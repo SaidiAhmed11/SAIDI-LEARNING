@@ -15,6 +15,8 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { CourseManagementComponent } from './course-management/course-management.component';
 import { UpdateCourseComponent } from './update-course/update-course.component';
+import { MyCoursesComponent } from './my-courses/my-courses.component';
+import {AuthGuard} from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { UpdateCourseComponent } from './update-course/update-course.component';
     CourseDetailComponent,
     AddCourseComponent,
     CourseManagementComponent,
-    UpdateCourseComponent
+    UpdateCourseComponent,
+    MyCoursesComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { UpdateCourseComponent } from './update-course/update-course.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
