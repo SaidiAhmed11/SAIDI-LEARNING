@@ -11,6 +11,8 @@ import {UpdateCourseComponent} from './update-course/update-course.component';
 import {CourseDetailComponent} from './course-detail/course-detail.component';
 import {MyCoursesComponent} from './my-courses/my-courses.component';
 import {AuthGuard} from './auth.guard';
+import {ParticipantsComponent} from './participants/participants.component';
+import {HomeAdminComponent} from './home-admin/home-admin.component';
 
 const routes: Routes = [
   {path : "elearning" , component:ElearningComponent,children:
@@ -27,9 +29,11 @@ const routes: Routes = [
   {path : "login" , canActivate:[AuthGuard],component:LoginComponent},
   {path : "admin" , component:AdminComponent,children:
     [
+      {path : "home" , component:HomeAdminComponent},
       {path : "add" , component:AddCourseComponent},
       {path : "courses" , component:CourseManagementComponent},
       {path : "update/:id" , component:UpdateCourseComponent},
+      {path : "participants/:id" , component:ParticipantsComponent},
     ]
   },
 

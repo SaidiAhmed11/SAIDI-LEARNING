@@ -2,32 +2,55 @@
   "users": [
     {
       "id": 1,
-      "lastname": "ahmed",
+      "lastname": "ahmed11",
       "firsttname": "saidi",
       "username": "ahmedsaidi11",
       "email": "ahmed.saidi@esprit.tn",
       "role": "Admin",
       "password": "ahmed",
-      "logged": false
+      "logged": false,
+      "img": "ahmed.JPG"
     },
     {
       "id": 2,
-      "lastname": "ahmed",
-      "firsttname": "saidi",
-      "username": "ahmedsaidi",
-      "email": "ahmed.saidi@esprit.tn",
+      "lastname": "ben amor",
+      "firsttname": "ines",
+      "username": "inesbenamor",
+      "email": "ines.benamor@esprit.tn",
       "role": "User",
-      "password": "ahmed",
-      "logged": false
+      "password": "nenness",
+      "logged": false,
+      "img": "ines.jpg"
+    },
+    {
+      "id": 3,
+      "lastname": "Mhamdi",
+      "firsttname": "Chiheb",
+      "username": "chihebmhamdi",
+      "email": "chiheb.mhamdi@esprit.tn",
+      "role": "User",
+      "password": "chiheb",
+      "logged": false,
+      "img": "chiheb.jpg"
+    },
+    {
+      "id": 3892897074055800,
+      "lastname": "Saidi",
+      "firsttname": "saidi",
+      "username": "player",
+      "email": "player.saidi@esprit.tn",
+      "role": "User",
+      "password": "player",
+      "logged": false,
+      "img": "ahmed1.jpg"
     }
-
   ],
   "courses": [
     {
       "id": 1,
       "courseName": "Website Design",
       "price": 169,
-      "mumbParticipants": 10,
+      "mumbParticipants": 1,
       "seats": 30,
       "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
       "category": "Web Development",
@@ -38,34 +61,88 @@
       "id": 2,
       "courseName": "Search Engine Optimization",
       "price": 250,
-      "mumbParticipants": 9,
+      "mumbParticipants": 3,
       "seats": 46,
       "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
       "category": "Marketing",
       "image": "course-2.jpg",
-      "likes": 12
+      "likes": 13
     },
     {
       "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
       "id": 3,
       "courseName": "Website Design",
-      "seats": 66,
+      "seats": 3,
       "price": "250",
       "category": "Web",
       "image": "course-3.jpg",
-      "mumbParticipants": 66,
+      "mumbParticipants": 3,
       "likes": 1
     }
   ],
   "participation": [
     {
+      "idUser": 3,
+      "idCourse": 2,
+      "courseName": "Search Engine Optimization",
+      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
+      "image": "course-2.jpg",
+      "category": "Marketing",
+      "id": 1
+    },
+    {
       "idUser": 2,
+      "idCourse": 3,
+      "courseName": "Website Design",
+      "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "image": "course-3.jpg",
+      "category": "Web",
+      "id": 2
+    },
+    {
+      "idUser": 3,
+      "idCourse": 3,
+      "courseName": "Website Design",
+      "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "image": "course-3.jpg",
+      "category": "Web",
+      "id": 3
+    },
+    {
+      "idUser": 3892897074055800,
       "idCourse": 1,
       "courseName": "Website Design",
       "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
       "image": "course-1.jpg",
       "category": "Web Development",
-      "id": 1
+      "id": 6
+    },
+    {
+      "idUser": 1,
+      "idCourse": 3,
+      "courseName": "Website Design",
+      "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "image": "course-3.jpg",
+      "category": "Web",
+      "id": 7
+    },
+    {
+      "idUser": 3892897074055800,
+      "idCourse": 2,
+      "courseName": "Search Engine Optimization",
+      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
+      "image": "course-2.jpg",
+      "category": "Marketing",
+      "id": 8
+    },
+    {
+      "idUser": 2,
+      "idCourse": 2,
+      "courseName": "Search Engine Optimization",
+      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
+      "image": "course-2.jpg",
+      "category": "Marketing",
+      "id": 9
     }
   ]
 }

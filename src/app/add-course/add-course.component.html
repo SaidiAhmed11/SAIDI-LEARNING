@@ -1,137 +1,183 @@
-<!-- Page Header-->
-<header class="page-header">
-  <div class="container-fluid">
-    <h2 class="no-margin-bottom">Add Course</h2>
-  </div>
-</header>
-<!-- Breadcrumb-->
-<div class="breadcrumb-holder container-fluid">
-  <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-    <li class="breadcrumb-item active">Add Course</li>
-  </ul>
-</div>
-<!-- Forms Section-->
-<section class="forms">
-  <div class="container-fluid">
-    <div class="row">
+<div class="page-content d-flex align-items-stretch">
+  <!-- Side Navbar -->
+  <nav class="side-navbar">
+    <!-- Sidebar Header-->
+    <div class="sidebar-header d-flex align-items-center">
+      <div class="avatar"><img src="/assets/admin/img/ahmed.JPG" alt="..." class="img-fluid rounded-circle"></div>
+      <div class="title">
+        <h1 class="h4">Saidi Ahmed</h1>
+        <p>Web Devolopper</p>
+      </div>
+    </div>
+    <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+    <ul class="list-unstyled">
+      <li ><a routerLink="/admin/home"> <i class="icon-home"></i>Home </a></li>
+      <li ><a routerLink="/admin/courses"> <i class="icon-grid"></i> Courses Management </a></li>
+      <li class="active"><a routerLink="/admin/add"> <i class="icon-padnote"></i>Add Course </a></li>
+    </ul>
+  </nav>
+  <div class="content-inner">
 
 
-      <!-- Form Elements -->
-      <div class="col-lg-12">
-        <div class="card">
-          <div class="card-close">
-            <div class="dropdown">
-              <button type="button" id="closeCard5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-              <div aria-labelledby="closeCard5" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-            </div>
-          </div>
-          <div class="card-header d-flex align-items-center">
-            <h3 class="h4">All form elements</h3>
-          </div>
-          <div class="card-body">
-
-            <form class="form-horizontal" #CourseFrom="ngForm">
 
 
-              <div class="form-group row">
-                <label class="col-sm-3 form-control-label">ID </label>
-                <div class="col-sm-9">
-                  <input type="number"
-                         [ngClass]="[id.touched  ? 'form-control' : '',id.errors?.required ? 'form-control' : 'form-control is-valid',((id.touched) && (id.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
-                         name="id" [(ngModel)]="course.id" #id="ngModel" required>
-                  <div class="invalid-feedback" *ngIf="id.touched && id?.errors?.required" >ID is required</div>
+
+
+    <!-- Page Header-->
+    <header class="page-header">
+      <div class="container-fluid">
+        <h2 class="no-margin-bottom">Add Course</h2>
+      </div>
+    </header>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-holder container-fluid">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
+        <li class="breadcrumb-item active">Add Course</li>
+      </ul>
+    </div>
+    <!-- Forms Section-->
+    <section class="forms">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <!-- Form Elements -->
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-close">
+                <div class="dropdown">
+                  <button type="button" id="closeCard5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                  <div aria-labelledby="closeCard5" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
                 </div>
               </div>
-
-
-              <div class="line"></div>
-              <div class="form-group row">
-                <label class="col-sm-3 form-control-label">Course Name </label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" name="courseName"
-                         [ngClass]="[courseName.touched  ? 'form-control' : '',courseName.errors?.required ? 'form-control' : 'form-control is-valid',courseName.errors?.minlength ? 'form-control' : '',((courseName.errors?.minlength) || (courseName.touched) && (courseName.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
-                         [(ngModel)]="course.courseName"  #courseName="ngModel" required minlength="5">
-                  <div class="invalid-feedback" *ngIf="courseName.touched && courseName?.errors?.required" >Course Name is required</div>
-                  <div class="invalid-feedback" *ngIf="courseName?.errors?.minlength" >Mnimum 5 caracters</div>
-                </div>
+              <div class="card-header d-flex align-items-center">
+                <h3 class="h4">All form elements</h3>
               </div>
-              <div class="line"></div>
+              <div class="card-body">
+
+                <form class="form-horizontal" #CourseFrom="ngForm">
 
 
-              <div class="form-group row">
-                <label class="col-sm-3 form-control-label">Seats</label>
-                <div class="col-sm-9">
-                  <input type="number" class="form-control"  name="seats"
-                         [ngClass]="[seats.touched  ? 'form-control' : '',seats.errors?.required ? 'form-control' : 'form-control is-valid',seats.errors?.pattern ? 'form-control' : '',((seats.errors?.pattern) || (seats.touched) && (seats.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
-                         [(ngModel)]="course.seats" #seats="ngModel" required pattern="[1-9][0-9]*">
-                  <div class="invalid-feedback" *ngIf="seats.touched && seats?.errors?.required" >number of Seats is required</div>
-                  <div class="invalid-feedback" *ngIf="seats?.errors?.pattern" >the number of seats should be positive</div>
-                </div>
-              </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">ID </label>
+                    <div class="col-sm-9">
+                      <input type="number"
+                             [ngClass]="[id.touched  ? 'form-control' : '',id.errors?.required ? 'form-control' : 'form-control is-valid',((id.touched) && (id.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
+                             name="id" [(ngModel)]="course.id" #id="ngModel" required>
+                      <div class="invalid-feedback" *ngIf="id.touched && id?.errors?.required" >ID is required</div>
+                    </div>
+                  </div>
 
-              <div class="line"></div>
-              <div class="form-group">
-                <label class="col-sm-3 form-control-label">Price</label>
-                <div class="input-group">
-                  <div class="input-group-prepend"><span class="input-group-text">$</span></div>
-                  <input type="text" class="form-control" name="price"
-                         [ngClass]="[price.touched  ? 'form-control' : '',price.errors?.required ? 'form-control' : 'form-control is-valid',price.errors?.pattern ? 'form-control' : '',((price.errors?.pattern) || (price.touched) && (price.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
-                         [(ngModel)]="course.price" required pattern="[1-9][0-9]*" #price="ngModel">
-                  <div class="invalid-feedback" *ngIf="price.touched && price?.errors?.required" >Price is required</div>
-                  <div class="invalid-feedback" *ngIf="price?.errors?.pattern" >Price should be positive</div>
-                </div>
-              </div>
-              <div class="line"></div>
 
-              <div class="form-group row">
-                <label class="col-sm-3 form-control-label" >Description</label>
-                <div class="col-sm-9">
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">Course Name </label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="courseName"
+                             [ngClass]="[courseName.touched  ? 'form-control' : '',courseName.errors?.required ? 'form-control' : 'form-control is-valid',courseName.errors?.minlength ? 'form-control' : '',((courseName.errors?.minlength) || (courseName.touched) && (courseName.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
+                             [(ngModel)]="course.courseName"  #courseName="ngModel" required minlength="5">
+                      <div class="invalid-feedback" *ngIf="courseName.touched && courseName?.errors?.required" >Course Name is required</div>
+                      <div class="invalid-feedback" *ngIf="courseName?.errors?.minlength" >Mnimum 5 caracters</div>
+                    </div>
+                  </div>
+                  <div class="line"></div>
+
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">Seats</label>
+                    <div class="col-sm-9">
+                      <input type="number" class="form-control"  name="seats"
+                             [ngClass]="[seats.touched  ? 'form-control' : '',seats.errors?.required ? 'form-control' : 'form-control is-valid',seats.errors?.pattern ? 'form-control' : '',((seats.errors?.pattern) || (seats.touched) && (seats.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
+                             [(ngModel)]="course.seats" #seats="ngModel" required pattern="[1-9][0-9]*">
+                      <div class="invalid-feedback" *ngIf="seats.touched && seats?.errors?.required" >number of Seats is required</div>
+                      <div class="invalid-feedback" *ngIf="seats?.errors?.pattern" >the number of seats should be positive</div>
+                    </div>
+                  </div>
+
+                  <div class="line"></div>
+                  <div class="form-group">
+                    <label class="col-sm-3 form-control-label">Price</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend"><span class="input-group-text">$</span></div>
+                      <input type="text" class="form-control" name="price"
+                             [ngClass]="[price.touched  ? 'form-control' : '',price.errors?.required ? 'form-control' : 'form-control is-valid',price.errors?.pattern ? 'form-control' : '',((price.errors?.pattern) || (price.touched) && (price.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
+                             [(ngModel)]="course.price" required pattern="[1-9][0-9]*" #price="ngModel">
+                      <div class="invalid-feedback" *ngIf="price.touched && price?.errors?.required" >Price is required</div>
+                      <div class="invalid-feedback" *ngIf="price?.errors?.pattern" >Price should be positive</div>
+                    </div>
+                  </div>
+                  <div class="line"></div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label" >Description</label>
+                    <div class="col-sm-9">
                 <textarea class="form-control" name="description" rows="4"
                           [ngClass]="[description.touched  ? 'form-control' : '',description.errors?.required ? 'form-control' : 'form-control is-valid',description.errors?.minlength ? 'form-control' : '',((description.errors?.minlength) || (description.touched) && (description.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
                           [(ngModel)]="course.description" #description="ngModel" required minlength="20" ></textarea>
-                  <div class="invalid-feedback" *ngIf="description.touched && description?.errors?.required" >Description Name is required</div>
-                  <div class="invalid-feedback" *ngIf="description?.errors?.minlength" >Minmum 20 caracters</div>
-                </div>
+                      <div class="invalid-feedback" *ngIf="description.touched && description?.errors?.required" >Description Name is required</div>
+                      <div class="invalid-feedback" *ngIf="description?.errors?.minlength" >Minmum 20 caracters</div>
+                    </div>
+                  </div>
+                  <div class="line"></div>
+
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">Category</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="category"
+                             [ngClass]="[category.touched  ? 'form-control' : '',category.errors?.required ? 'form-control' : 'form-control is-valid',((category.touched) && (category.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
+                             [(ngModel)]="course.category" #category="ngModel" required>
+                      <div class="invalid-feedback" *ngIf="category.touched && category?.errors?.required" >Category is required</div>
+
+                    </div>
+                  </div>
+
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <label for="fileInput" class="col-sm-3 form-control-label">Course Image</label>
+                    <div class="col-sm-9">
+                      <input id="fileInput" type="file" class="form-control-file" name="image"
+                             [ngClass]="[image.touched  ? 'form-control' : '',image.errors?.required ? 'form-control' : 'form-control is-valid',((image.touched) && (image.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
+                             [(ngModel)]="course.image" #image="ngModel" required id="image"  (change)="handleFileInput($event.target.files)">
+                      <div class="invalid-feedback" *ngIf="image.touched && image?.errors?.required" >Image is required</div>
+
+                    </div>
+                  </div>
+
+                  <div class="line"></div>
+                  <div class="form-group row">
+                    <div class="col-sm-4 offset-sm-3">
+                      <button type="submit" class="btn btn-secondary" (click)="Reset()">Cancel</button>
+                      <button type="submit" class="btn btn-primary" [disabled]="CourseFrom.invalid" (click)="addCourse()">Add Course</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="line"></div>
+            </div>
+          </div>
 
-              <div class="line"></div>
-              <div class="form-group row">
-                <label class="col-sm-3 form-control-label">Category</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" name="category"
-                         [ngClass]="[category.touched  ? 'form-control' : '',category.errors?.required ? 'form-control' : 'form-control is-valid',((category.touched) && (category.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
-                         [(ngModel)]="course.category" #category="ngModel" required>
-                  <div class="invalid-feedback" *ngIf="category.touched && category?.errors?.required" >Category is required</div>
+        </div>
+      </div>
+    </section>
 
-                </div>
-              </div>
 
-              <div class="line"></div>
-              <div class="form-group row">
-                <label for="fileInput" class="col-sm-3 form-control-label">Course Image</label>
-                <div class="col-sm-9">
-                  <input id="fileInput" type="file" class="form-control-file" name="image"
-                         [ngClass]="[image.touched  ? 'form-control' : '',image.errors?.required ? 'form-control' : 'form-control is-valid',((image.touched) && (image.errors?.required)) ? 'form-control is-invalid' : 'form-control']"
-                         [(ngModel)]="course.image" #image="ngModel" required id="image"  (change)="handleFileInput($event.target.files)">
-                  <div class="invalid-feedback" *ngIf="image.touched && image?.errors?.required" >Image is required</div>
 
-                </div>
-              </div>
 
-              <div class="line"></div>
-              <div class="form-group row">
-                <div class="col-sm-4 offset-sm-3">
-                  <button type="submit" class="btn btn-secondary" (click)="Reset()">Cancel</button>
-                  <button type="submit" class="btn btn-primary" [disabled]="CourseFrom.invalid" (click)="addCourse()">Add Course</button>
-                </div>
-              </div>
-            </form>
+
+
+    <!-- Page Footer-->
+    <footer class="main-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Your company &copy; 2020-2021</p>
+          </div>
+          <div class="col-sm-6 text-right">
+            <p> By <a  class="external">Saidi Ahmed </a></p>
           </div>
         </div>
       </div>
-
-    </div>
+    </footer>
   </div>
-</section>
+</div>

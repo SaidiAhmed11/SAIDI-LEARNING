@@ -24,7 +24,7 @@ export class CourseComponent implements OnInit {
     subscribe(res=>{
       this.participatedUsers=res
       for (let i in this.participatedUsers) {
-        if (this.participatedUsers[i].idCourse == this.course.id && this.participatedUsers[i].idUser == 2) {
+        if (this.participatedUsers[i].idCourse == this.course.id && this.participatedUsers[i].idUser == +localStorage.getItem("id")) {
           this.participated=true;
         }
       }
@@ -41,7 +41,7 @@ export class CourseComponent implements OnInit {
   {
     this.course.mumbParticipants++;
 
-    this.participation.idUser=2;
+    this.participation.idUser=+localStorage.getItem("id");
     this.participation.idCourse=this.course.id;
     this.participation.courseName=this.course.courseName;
     this.participation.description=this.course.description;
@@ -57,7 +57,7 @@ export class CourseComponent implements OnInit {
   Cancel()
   {
     for (let i in this.participatedUsers) {
-      if(this.participatedUsers[i].idCourse==this.course.id && this.participatedUsers[i].idUser==2)
+      if(this.participatedUsers[i].idCourse==this.course.id && this.participatedUsers[i].idUser==+localStorage.getItem("id"))
       {
         this.participation=this.participatedUsers[i];
       }

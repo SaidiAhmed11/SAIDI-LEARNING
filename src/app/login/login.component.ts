@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {UserService} from '../shared/user.service';
 import {Role} from '../model/Role';
 
+declare var FB:any;
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,56 +23,31 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // redirect to home if already logged in
+    (window as any).fbAsyncInit = function() {
+      FB.init({
+        appId      : '202529791361200',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v9.0'
+      });
 
-    /*this.userService.userLoggedIn().subscribe(res=> {
-        if (res != null) {
+      FB.AppEvents.logPageView();
 
-          if (res.role ===Role.Admin) {
-            console.log(res);
-            this.router.navigate(['/admin']);
-          } else if (res.role==Role.User) {
-            this.router.navigateByUrl("/home");
-          }
-        } else if(res==null){
-          console.log("tiwa");
-          this.router.navigateByUrl("/login");
+    };
 
-        }
-      }
-    );*/
-    if (localStorage.getItem("id")==null){
-      this.router.navigateByUrl("/login")
-    }
-    else
-    {
-      if(localStorage.getItem("role")=="Admin")
-      {
-        this.router.navigateByUrl("/admin")
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
-      }
-      else if(localStorage.getItem("role")=="User")
-      {this.router.navigateByUrl("/elearning/home")
-       }
-
-    }
 
   }
 
   login()
   {
-   /* this.userService.login(this.user.username,this.user.password).subscribe(res=>this.userTest=res);
-    if(this.userTest==null)
-    {
-      this.router.navigateByUrl("/login");
-    }
-    else
-      if(this.userTest.role=="Admin")
-        {
-          this.router.navigateByUrl("/admin");
-
-      }*/
-
     this.userService.getUsersJson().subscribe(res=>{
       for(let i in res)
       {
@@ -81,7 +57,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('id',res[i].id.toString());
             localStorage.setItem('role',this.user.role);
             console.log("admin");
-            this.router.navigateByUrl("/admin");
+            this.router.navigateByUrl("/admin/home");
 
           }
           else if (this.user.username==res[i].username && this.user.password == res[i].password && res[i].role=="User")
@@ -98,7 +74,23 @@ export class LoginComponent implements OnInit {
       }
 
     });
+  }
 
+
+  submitLogin(){
+    FB.login((response)=>
+    {
+      if (response.authResponse)
+      {
+        localStorage.setItem('id',response.authResponse.userID);
+        localStorage.setItem('role',this.user.role);
+        this.router.navigateByUrl("/elearning/home");
+      }
+      else
+      {
+        this.showAlert=true;
+      }
+    });
 
   }
 

@@ -1,71 +1,123 @@
-<!-- Page Header-->
-<header class="page-header">
-  <div class="container-fluid">
-    <h2 class="no-margin-bottom">Courses Management</h2>
-  </div>
-</header>
-<!-- Breadcrumb-->
-<div class="breadcrumb-holder container-fluid">
-  <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-    <li class="breadcrumb-item active">Courses</li>
-  </ul>
-</div>
-<section class="tables" style="width:2270px">
-  <div class="container-fluid" >
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="card" >
-          <div class="card-close">
-            <div class="dropdown">
-              <button type="button" id="closeCard3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-              <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-            </div>
-          </div>
-          <div class="card-header d-flex align-items-center">
-            <h3 class="h4">Courses</h3>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
+<div class="page-content d-flex align-items-stretch">
+  <!-- Side Navbar -->
+  <nav class="side-navbar">
+    <!-- Sidebar Header-->
+    <div class="sidebar-header d-flex align-items-center">
+      <div class="avatar"><img src="/assets/admin/img/ahmed.JPG" alt="..." class="img-fluid rounded-circle"></div>
+      <div class="title">
+        <h1 class="h4">Saidi Ahmed</h1>
+        <p>Web Devolopper</p>
+      </div>
+    </div>
+    <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+    <ul class="list-unstyled">
+      <li ><a routerLink="/admin/home"> <i class="icon-home"></i>Home </a></li>
+      <li class="active"><a routerLink="/admin/courses"> <i class="icon-grid"></i> Courses Management </a></li>
+      <li><a routerLink="/admin/add"> <i class="icon-padnote"></i>Add Course </a></li>
+    </ul>
+  </nav>
+  <div class="content-inner">
 
-              <input #query (keyup)="search(query.value)" type="text" class="form-control" placeholder="Search...">
 
-              <table class="table table-striped table-hover">
-                <div >
-                <thead>
-                <tr>
-                  <th>#Id</th>
-                  <th>Course Name</th>
-                  <th>Image</th>
-                  <th>Category</th>
-                  <th>description</th>
-                  <th>Price</th>
-                  <th>Participants / Seats</th>
-                  <th>Likes</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let c of searchCourses; let i=index">
-                  <th scope="row">{{c.id}}</th>
-                  <td>{{c.courseName}}</td>
-                  <img src="/assets/elearning/img/{{c.image}}" class="img-fluid" alt="...">
-                  <td>{{c.category}}</td>
-                  <td>{{c.description}}</td>
-                  <td>{{c.price}}</td>
-                  <td>{{c.mumbParticipants}} / {{c.seats}}</td>
-                  <td>{{c.likes}}</td>
-                  <button type="button" class="btn btn-outline-danger" (click)="delete(c)">Delete</button>
-                  <button type="button" class="btn btn-outline-secondary" [routerLink]="['/admin/update',c.id]">Update</button>
 
-                </tr>
 
-                </tbody>
+
+    <!-- Page Header-->
+    <header class="page-header">
+      <div class="container-fluid">
+        <h2 class="no-margin-bottom">Courses Management</h2>
+      </div>
+    </header>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-holder container-fluid">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
+        <li class="breadcrumb-item active">Courses</li>
+      </ul>
+    </div>
+    <section class="tables" style="width:2270px">
+      <div class="container-fluid" >
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card" >
+              <div class="card-close">
+                <div class="dropdown">
+                  <button type="button" id="closeCard3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                  <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
                 </div>
-              </table>
+              </div>
+              <div class="card-header d-flex align-items-center">
+                <h3 class="h4">Courses</h3>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+
+                  <input #query (keyup)="search(query.value)" type="text" class="form-control" placeholder="Search...">
+
+                  <table class="table table-striped table-hover">
+                    <div >
+                      <thead>
+                      <tr>
+                        <th>#Id</th>
+                        <th>Course Name</th>
+                        <th>Image</th>
+                        <th>Category</th>
+                        <th>description</th>
+                        <th>Price</th>
+                        <th>Participants / Seats</th>
+                        <th>Likes</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr *ngFor="let c of searchCourses; let i=index">
+                        <th scope="row">{{c.id}}</th>
+                        <td>{{c.courseName}}</td>
+                        <img src="/assets/elearning/img/{{c.image}}" class="img-fluid" alt="...">
+                        <td>{{c.category}}</td>
+                        <td>{{c.description}}</td>
+                        <td>{{c.price}}</td>
+                        <td>{{c.mumbParticipants}} / {{c.seats}}</td>
+                        <td>{{c.likes}}</td>
+                        <button type="button" class="btn btn-outline-danger" (click)="delete(c)">Delete</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-outline-secondary" [routerLink]="['/admin/update',c.id]">Update</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-outline-primary" [routerLink]="['/admin/participants',c.id]">Participants</button>
+
+                      </tr>
+
+                      </tbody>
+                    </div>
+
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Page Footer-->
+    <footer class="main-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Your company &copy; 2020-2021</p>
+          </div>
+          <div class="col-sm-6 text-right">
+            <p> By <a  class="external">Saidi Ahmed </a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
-</section>
+</div>
