@@ -10,8 +10,11 @@ declare var FB:any;
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
+  username:string=localStorage.getItem('username');
   coursesList:Course[];
   searchCourses:Course[];
+  course:Course=new Course();
+
 
   constructor(private  coursesService:CourseService,private router:Router) { }
 
@@ -38,6 +41,9 @@ export class CoursesComponent implements OnInit {
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+
+
   }
 
   LikeCourses(c: Course)
@@ -48,7 +54,7 @@ export class CoursesComponent implements OnInit {
   }
 
   search(query : any){
-    this.searchCourses = (query) ? this.coursesList.filter(course=>course.courseName.toLowerCase().includes(query.toLowerCase()) ||course.category.toLowerCase().includes(query.toLowerCase())) : this.coursesList;
+    this.searchCourses = (query) ? this.coursesList.filter(course=>course.courseName.toLowerCase().includes(query.toLowerCase()) ||course.category.toLowerCase().includes(query.toLowerCase()) ||course.price.toString().toLowerCase().includes(query.toLowerCase()) ): this.coursesList;
   }
 
   logout()

@@ -13,8 +13,9 @@
         <li class="active"><a routerLink="/elearning/courses">Courses</a></li>
 
         <li><a href="contact.html">Contact</a></li>
-        <li class="drop-down"><a href="">My Profile</a>
+        <li class="drop-down"><a href="">Profile ({{username}})</a>
           <ul>
+            <li><a routerLink="/elearning/profile">My Profile</a></li>
             <li><a routerLink="/elearning/mycourses">My Courses</a></li>
           </ul>
         </li>
@@ -35,8 +36,42 @@
   <div class="breadcrumbs">
     <div class="container">
       <h2>Courses</h2>
-      <p> You can search courses by categr or by name</p>
-      <input #query (keyup)="search(query.value)" type="text" class="form-control" placeholder="Search...">
+      <h6> You can search courses by Category,by Name or Price</h6><br>
+      <!--<input #query (keyup)="search(query.value)" type="text" class="form-control" placeholder="Search...">-->
+
+
+      <form  class="php-email-form">
+        <div class="form-row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="courseName" class="form-control" id="courseName" placeholder="Course Name"
+                   [(ngModel)]="course.courseName" #courseName="ngModel" required  (keyup)="search(course.courseName)" minlength="2"/>
+            <div  class="alert alert-danger" role="alert" *ngIf="courseName.errors?.minlength">Minimum 2 caracters </div>
+
+          </div>
+
+          <div class="col-md-6 form-group">
+            <input type="text" class="form-control" name="category" id="category"  placeholder="Category"
+                   [(ngModel)]="course.category"  #category="ngModel" (keyup)="search(course.category)" minlength="2" />
+            <div  class="alert alert-danger" role="alert" *ngIf="category.errors?.minlength">Minimum 2 caracters </div>
+
+
+          </div>
+
+          <div class="col-md-6 form-group">
+            <input  type="text" class="form-control" name="price" id="price" placeholder="Price"
+                   [(ngModel)]="course.price" #price="ngModel"(keyup)="search(course.price)" pattern="[1-9][0-9]*"/>
+            <div  class="alert alert-danger" role="alert" *ngIf="price.errors?.pattern">Price > 0</div>
+
+          </div>
+
+
+        </div>
+      </form>
+
+
+
+
+
     </div>
   </div><!-- End Breadcrumbs -->
 
@@ -59,3 +94,17 @@
 
 
 </main>
+<script src="/assets/elearning/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/elearning/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/elearning/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="/assets/elearning/vendor/php-email-form/validate.js"></script>
+<script src="/assets/elearning/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="/assets/elearning/vendor/counterup/counterup.min.js"></script>
+<script src="/assets/elearning/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="/assets/elearning/vendor/aos/aos.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/assets/elearning/js/main.js"></script>
+<script src="/assets/elearning/js/custom.js"></script>
+
+

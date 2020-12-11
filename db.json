@@ -3,7 +3,7 @@
     {
       "id": 1,
       "lastname": "ahmed11",
-      "firsttname": "saidi",
+      "firstname": "saidi",
       "username": "ahmedsaidi11",
       "email": "ahmed.saidi@esprit.tn",
       "role": "Admin",
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "lastname": "ben amor",
-      "firsttname": "ines",
+      "firstname": "ines",
       "username": "inesbenamor",
       "email": "ines.benamor@esprit.tn",
       "role": "User",
@@ -25,7 +25,7 @@
     {
       "id": 3,
       "lastname": "Mhamdi",
-      "firsttname": "Chiheb",
+      "firstname": "Chiheb",
       "username": "chihebmhamdi",
       "email": "chiheb.mhamdi@esprit.tn",
       "role": "User",
@@ -36,7 +36,7 @@
     {
       "id": 3892897074055800,
       "lastname": "Saidi",
-      "firsttname": "saidi",
+      "firstname": "saidi",
       "username": "player",
       "email": "player.saidi@esprit.tn",
       "role": "User",

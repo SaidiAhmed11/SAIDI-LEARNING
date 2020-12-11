@@ -13,6 +13,8 @@ declare var FB:any;
   styleUrls: ['./my-courses.component.css']
 })
 export class MyCoursesComponent implements OnInit {
+  username:string=localStorage.getItem("username");
+
   coursesList:Course[]=[];
   participatedUsers:Participation[]=[];
   constructor(private  coursesService:CourseService,private participationService:ParticipationService,private router:Router) {

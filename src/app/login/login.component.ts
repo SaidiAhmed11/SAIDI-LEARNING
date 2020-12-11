@@ -56,6 +56,7 @@ export class LoginComponent implements OnInit {
 
             localStorage.setItem('id',res[i].id.toString());
             localStorage.setItem('role',this.user.role);
+            localStorage.setItem('username',this.user.username);
             console.log("admin");
             this.router.navigateByUrl("/admin/home");
 
@@ -64,12 +65,12 @@ export class LoginComponent implements OnInit {
           {
             localStorage.setItem('id',res[i].id.toString());
             localStorage.setItem('role',this.user.role);
+            localStorage.setItem('username',res[i].firstname);
             console.log("user");
             this.router.navigateByUrl("/elearning/home");
           }
         else {
           this.showAlert=true;
-
         }
       }
 
@@ -83,7 +84,9 @@ export class LoginComponent implements OnInit {
       if (response.authResponse)
       {
         localStorage.setItem('id',response.authResponse.userID);
+        this.userService.getUserByIdJson(+localStorage.getItem('id')).subscribe(res=>this.user=res);
         localStorage.setItem('role',this.user.role);
+        localStorage.setItem('username',this.user.firstname);
         this.router.navigateByUrl("/elearning/home");
       }
       else

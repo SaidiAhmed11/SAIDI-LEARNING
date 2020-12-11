@@ -1,0 +1,66 @@
+
+
+
+
+
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo mr-auto"><a href="index.html">Saidi-Learning</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a routerLink="/elearning/home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a routerLink="/elearning/courses">Courses</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+        <li class="drop-down"><a href="">Profile ({{username}})</a>
+          <ul>
+            <li><a routerLink="/elearning/profile">My Profile</a></li>
+            <li><a routerLink="/elearning/mycourses">My Courses</a></li>
+          </ul>
+        </li>
+        <a routerLink="/elearning/courses" class="get-started-btn">Get Started</a>
+      </ul>
+
+    </nav><!-- .nav-menu -->
+
+    <button  class="get-started-btn" (click)="logout()">Logout</button>
+
+  </div>
+</header>
+
+
+<main id="main"><br><br><br>
+  <div class="container mt-5 d-flex justify-content-center">
+    <div class="card p-4 mt-3">
+      <div class="first">
+        <h6 class="heading">{{user.firstname}} {{user.lastname}}</h6>
+        <div class="time d-flex flex-row align-items-center justify-content-between mt-3">
+          <div class="d-flex align-items-center"> <i class="fa fa-clock-o clock"></i> <span class="hour ml-1">{{user.email}}</span> </div>
+          <div> <span class="font-weight-bold">{{user.role}}</span> </div>
+        </div>
+      </div>
+      <div class="second d-flex flex-row mt-2">
+        <div class="image mr-3"> <img src="/assets/elearning/img/{{user.img}}" class="rounded-circle" width="60" /> </div>
+        <div class="">
+          <div class="d-flex flex-row mb-1"> <span>@{{user.username}}</span>
+            <div class="ratings ml-2"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+          </div>
+          <div>
+            <button class="btn btn-outline-dark btn-sm px-2">+ follow</button>
+            <a class="btn btn-outline-dark btn-sm" routerLink="/elearning/mycourses">My Courses</a>
+          </div>
+        </div>
+      </div>
+      <hr class="line-color">
+      <h6>{{numbParticipations}} Courses</h6>
+      <div class="third mt-4"> <a class="btn btn-success btn-block" routerLink="/elearning/courses" > Start Now</a>
+      </div>
+    </div>
+  </div>
+
+</main>

@@ -60,7 +60,8 @@ export class UserService {
 
   Authentification(user:User)
   {
-    this.getUsersJson().subscribe(res=>{
+    this.getUsersJson().subscribe(res=>
+    {
       for(let i in res)
       {
         if(user.username==res[i].username && user.password == res[i].password)
@@ -81,8 +82,8 @@ export class UserService {
           return "";
         }
       }
-
-    });
+    }
+    );
 
   }
 

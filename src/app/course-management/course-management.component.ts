@@ -19,7 +19,7 @@ export class CourseManagementComponent implements OnInit {
 
 
   search(query : any){
-    this.searchCourses = (query) ? this.coursesList.filter(course=>course.courseName.toLowerCase().includes(query.toLowerCase()) ||course.category.toLowerCase().includes(query.toLowerCase())) : this.coursesList;
+    this.searchCourses = (query) ? this.coursesList.filter(course=>course.courseName.toLowerCase().includes(query.toLowerCase()) ||course.category.toLowerCase().includes(query.toLowerCase()) ) : this.coursesList;
   }
 
   delete(c : Course)

@@ -19,6 +19,7 @@ import { MyCoursesComponent } from './my-courses/my-courses.component';
 import {AuthGuard} from './auth.guard';
 import { ParticipantsComponent } from './participants/participants.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
     UpdateCourseComponent,
     MyCoursesComponent,
     ParticipantsComponent,
-    HomeAdminComponent
+    HomeAdminComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

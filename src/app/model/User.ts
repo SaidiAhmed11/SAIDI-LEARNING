@@ -4,7 +4,7 @@ import {Course} from './Course';
 export class User{
   id:number;
   lastname:string;
-  fiastname:string;
+  firstname:string;
   username:string;
   email:string
   password:string;

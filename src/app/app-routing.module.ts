@@ -13,12 +13,14 @@ import {MyCoursesComponent} from './my-courses/my-courses.component';
 import {AuthGuard} from './auth.guard';
 import {ParticipantsComponent} from './participants/participants.component';
 import {HomeAdminComponent} from './home-admin/home-admin.component';
+import {ProfileComponent} from './profile/profile.component';
 
 const routes: Routes = [
   {path : "elearning" , component:ElearningComponent,children:
     [
       {path : "home" , component:HomeComponent},
       {path : "mycourses" , component:MyCoursesComponent},
+      {path : "profile" , component:ProfileComponent},
       {path : "courses" , component:CoursesComponent,children:
         [
           {path : "detail/:id" , component:CourseDetailComponent},
