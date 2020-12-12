@@ -17,10 +17,7 @@ export class UserService {
   }
   constructor(private httpClient : HttpClient) { }
 
-  getUsers() : Observable<User[]>
-  {
-    return  this.httpClient.get<User[]>("https://jsonplaceholder.typicode.com/users");
-  }
+
 
   getUsersJson() : Observable<User[]>
   {
@@ -29,8 +26,7 @@ export class UserService {
   addUser(user : User) : Observable<User>
   {
     return this.httpClient.post<User>(this.urlUsers,user,this.httpOptions).pipe(
-      catchError(this.handleError)
-    );
+      catchError(this.handleError));
   }
   deleteUser(user: number | User ) :Observable<User>
   {

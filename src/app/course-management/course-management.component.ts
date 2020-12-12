@@ -27,5 +27,37 @@ export class CourseManagementComponent implements OnInit {
     this.coursesService.deleteCourse(c).subscribe(next=>this.coursesService.getCoursesJson().subscribe(next=>this.searchCourses=next));
   }
 
+  CourseSeatsColor(availableSeats:number)
+  {
+    if (availableSeats== 0)
+    {
+      return "red";
+    }
+    else
+      return "black";
+
+  }
+
+  CourseSeatFontSize(availableSeats:number)
+  {
+    if (availableSeats == 0)
+    {
+      return "22px";
+    }
+    else
+      return "14px";
+
+  }
+
+  CourseSeatFontSizeNgStyle(availableSeats:number)
+  {
+    if (availableSeats == 0)
+    {
+      return "{'font-size' : '25px'}";
+    }
+    else
+      return "{'font-size' : '30px'}";
+
+  }
 
 }

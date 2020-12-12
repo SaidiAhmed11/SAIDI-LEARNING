@@ -16,6 +16,7 @@ export class HomeAdminComponent implements OnInit {
   user:User=new User();
   participations:Participation[]=[];
   courses:Course[]=[];
+  course:Course=new Course();
   availableSeats:number=0;
   constructor(private userService:UserService,private participationService:ParticipationService
   ,private coursesService:CourseService) { }
@@ -27,17 +28,43 @@ export class HomeAdminComponent implements OnInit {
       this.participationService.getParticipations().subscribe(res=>this.participations=res);
       this.userService.getUserByIdJson(+localStorage.getItem('id')).subscribe(res=>this.user=res)
       this.coursesService.getCoursesJson().subscribe(res=>
-
       {this.courses=res
         for(let i in this.courses)
         {
-          this.availableSeats+=this.availableSeats+this.courses[i].seats - this.courses[i].mumbParticipants;
+          this.availableSeats=this.availableSeats+(this.courses[i].seats - this.courses[i].mumbParticipants);
         }
       }
         );
 
-
     });
+  }
+
+  deleteUser(u:User)
+  {
+    this.userService.deleteUser(u).subscribe(next=>this.userService.getUsersJson()
+      .subscribe(res=>
+      {
+        this.users=res;
+        for(let i in this.participations)
+        {
+          if(this.participations[i].idUser==u.id)
+          {
+            this.coursesService.getCoursesByIdJson(this.participations[i].idCourse).subscribe(res=>{
+              res.mumbParticipants--;
+              this.course=res;
+              this.coursesService.updateCourse(this.course.id,this.course).subscribe();
+            })
+            this.participationService.deleteParticipation(this.participations[i])
+              .subscribe(next=>this.participationService.getParticipations()
+                .subscribe(res=>{
+                  this.participations=res;
+                  this.availableSeats++;
+                }));
+          }
+        }
+
+      }));
+
   }
 
 }

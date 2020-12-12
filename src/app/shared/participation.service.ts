@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Participation} from '../model/Participation';
 import {Course} from '../model/Course';
+import {CourseService} from './course.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class ParticipationService {
   }
 
   urlParticipation :string="http://localhost:3000/participation"
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient,private courseService:CourseService) { }
 
   public addParticipation(participation: Participation): Observable<Participation>
   {

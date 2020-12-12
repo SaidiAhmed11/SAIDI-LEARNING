@@ -69,23 +69,24 @@
                       </tr>
                       </thead>
                       <tbody>
-                      <tr *ngFor="let c of searchCourses; let i=index">
+                      <tr *ngFor="let c of searchCourses; let i=index" [ngClass]="(c.mumbParticipants-c.seats) == 0 ? 'table-danger' : ''">
                         <th scope="row">{{c.id}}</th>
                         <td>{{c.courseName}}</td>
-                        <img src="/assets/elearning/img/{{c.image}}" class="img-fluid" alt="...">
+                        <td><img  src="/assets/elearning/img/{{c.image}}" class="img-fluid" alt="..."></td>
                         <td>{{c.category}}</td>
                         <td>{{c.description}}</td>
                         <td>{{c.price}}</td>
-                        <td>{{c.mumbParticipants}} / {{c.seats}}</td>
+                        <td [style.color]="CourseSeatsColor(c.mumbParticipants-c.seats)" [style.font-size]="CourseSeatFontSize(c.mumbParticipants-c.seats)">{{c.mumbParticipants}} / {{c.seats}}</td>
                         <td>{{c.likes}}</td>
-                        <button type="button" class="btn btn-outline-danger" (click)="delete(c)">Delete</button>
+                        <td>
+                        <button type="button" [ngClass]="(c.mumbParticipants-c.seats) == 0 ? 'btn btn-danger' : 'btn btn-outline-danger'" (click)="delete(c)">Delete</button>
                         <br>
                         <br>
-                        <button type="button" class="btn btn-outline-secondary" [routerLink]="['/admin/update',c.id]">Update</button>
+                        <button type="button" [ngClass]="(c.mumbParticipants-c.seats) == 0 ? 'btn btn-secondary' : 'btn btn-outline-secondary'"   [routerLink]="['/admin/update',c.id]">Update</button>
                         <br>
                         <br>
-                        <button type="button" class="btn btn-outline-primary" [routerLink]="['/admin/participants',c.id]">Participants</button>
-
+                        <button type="button" [ngClass]="(c.mumbParticipants-c.seats) == 0 ? 'btn btn-primary' : 'btn btn-outline-primary'"  [routerLink]="['/admin/participants',c.id]">Participants</button>
+                        </td>
                       </tr>
 
                       </tbody>

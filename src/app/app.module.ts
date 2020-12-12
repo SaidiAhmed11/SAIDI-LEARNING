@@ -20,6 +20,9 @@ import {AuthGuard} from './auth.guard';
 import { ParticipantsComponent } from './participants/participants.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SignupComponent } from './signup/signup.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { ProfileComponent } from './profile/profile.component';
     MyCoursesComponent,
     ParticipantsComponent,
     HomeAdminComponent,
-    ProfileComponent
+    ProfileComponent,
+    SignupComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

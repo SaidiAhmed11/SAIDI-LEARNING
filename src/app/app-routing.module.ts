@@ -14,6 +14,8 @@ import {AuthGuard} from './auth.guard';
 import {ParticipantsComponent} from './participants/participants.component';
 import {HomeAdminComponent} from './home-admin/home-admin.component';
 import {ProfileComponent} from './profile/profile.component';
+import {SignupComponent} from './signup/signup.component';
+import {NotFoundComponent} from './not-found/not-found.component';
 
 const routes: Routes = [
   {path : "elearning" , component:ElearningComponent,children:
@@ -29,6 +31,7 @@ const routes: Routes = [
     ]
   },
   {path : "login" , canActivate:[AuthGuard],component:LoginComponent},
+  {path : "singup" , component:SignupComponent},
   {path : "admin" , component:AdminComponent,children:
     [
       {path : "home" , component:HomeAdminComponent},
@@ -40,6 +43,7 @@ const routes: Routes = [
   },
 
   {path:'',redirectTo:'login', pathMatch: 'full' },
+  {path : "**" , component:NotFoundComponent}
 
 
 ];

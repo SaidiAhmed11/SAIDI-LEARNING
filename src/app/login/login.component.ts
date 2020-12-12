@@ -83,10 +83,15 @@ export class LoginComponent implements OnInit {
     {
       if (response.authResponse)
       {
-        localStorage.setItem('id',response.authResponse.userID);
-        this.userService.getUserByIdJson(+localStorage.getItem('id')).subscribe(res=>this.user=res);
-        localStorage.setItem('role',this.user.role);
-        localStorage.setItem('username',this.user.firstname);
+
+        this.userService.getUserByIdJson(response.authResponse.userID).subscribe(res=>
+        {
+          this.user=res;
+          localStorage.setItem('id',response.authResponse.userID);
+          localStorage.setItem('role',this.user.role);
+          localStorage.setItem('username',this.user.username);
+        });
+
         this.router.navigateByUrl("/elearning/home");
       }
       else
