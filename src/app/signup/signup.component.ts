@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../model/User';
 import {UserService} from '../shared/user.service';
 import {Router} from '@angular/router';
+import { ToastrManager } from 'ng6-toastr-notifications';
+
 
 @Component({
   selector: 'app-signup',
@@ -15,7 +17,7 @@ export class SignupComponent implements OnInit {
   confirmPassword:string="";
   idExist:boolean=false;
   usernameExist:boolean=false;
-  constructor(private userService:UserService,private router:Router) { }
+  constructor(private userService:UserService,private router:Router,private toastr: ToastrManager) { }
 
   ngOnInit(): void {
     this.userService.getUsersJson().subscribe(res=>{
@@ -42,6 +44,7 @@ addUser()
   this.user.img=this.fileToUpload.name;
   this.userService.addUser(this.user).subscribe(next=>this.router.navigateByUrl('/login'));
   this.user=new User();
+  this.toastr.successToastr('Ready To login .', 'Success!');
 }
 
   handleFileInput(files: FileList) {

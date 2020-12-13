@@ -22,6 +22,10 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ng6-toastr-notifications';
+import { PricingComponent } from './pricing/pricing.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -43,6 +47,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ProfileComponent,
     SignupComponent,
     NotFoundComponent,
+    PricingComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +56,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

@@ -12,6 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9c9e3b85-60b8-4ade-b836-dcf552c6fcee" name="Default Changelist" comment="COMMIT 2">
       <change afterPath="$PROJECT_DIR$/src/app/course-management/course-management.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
     </list>
@@ -112,7 +114,9 @@
       <workItem from="1607508232064" duration="25732000" />
       <workItem from="1607605581437" duration="13663000" />
       <workItem from="1607682810129" duration="29701000" />
-      <workItem from="1607767781634" duration="27230000" />
+      <workItem from="1607767781634" duration="36956000" />
+      <workItem from="1607853290291" duration="296000" />
+      <workItem from="1607853739126" duration="3654000" />
     </task>
     <task id="LOCAL-00001" summary="COMMIT 2">
       <created>1607027450604</created>
@@ -162,22 +166,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607027083139" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1607776113277">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1607854807705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607776113277" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1607776113277">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607854807705" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1607854807705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607776113277" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1607776113277">
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607854807705" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1607854807705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607776113277" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1607776113277">
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607854807705" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1607854807705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607776113277" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607854807705" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1607028374262">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

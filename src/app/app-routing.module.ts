@@ -16,6 +16,9 @@ import {HomeAdminComponent} from './home-admin/home-admin.component';
 import {ProfileComponent} from './profile/profile.component';
 import {SignupComponent} from './signup/signup.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {PricingComponent} from './pricing/pricing.component';
+import {ContactComponent} from './contact/contact.component';
+
 
 const routes: Routes = [
   {path : "elearning" , component:ElearningComponent,children:
@@ -23,6 +26,8 @@ const routes: Routes = [
       {path : "home" , component:HomeComponent},
       {path : "mycourses" , component:MyCoursesComponent},
       {path : "profile" , component:ProfileComponent},
+      {path : "pricing/:id" , component:PricingComponent},
+      {path : "contact" , component:ContactComponent},
       {path : "courses" , component:CoursesComponent,children:
         [
           {path : "detail/:id" , component:CourseDetailComponent},

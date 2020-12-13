@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {User} from '../model/User';
 import {ActivatedRoute, Router} from '@angular/router';
 import {UserService} from '../shared/user.service';
-import {Role} from '../model/Role';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 declare var FB:any;
 @Component({
@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor( private route: ActivatedRoute,
                private router: Router,
-               private userService : UserService)
+               private userService : UserService,
+               private toastr: ToastrManager)
   {
 
   }
@@ -58,6 +59,8 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('role',this.user.role);
             localStorage.setItem('username',this.user.username);
             console.log("admin");
+            this.showAlert=false;
+            this.toastr.successToastr('Logged in', 'Success!');
             this.router.navigateByUrl("/admin/home");
 
           }
@@ -67,12 +70,15 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('role',this.user.role);
             localStorage.setItem('username',res[i].firstname);
             console.log("user");
+            this.showAlert=false;
+            this.toastr.successToastr('Logged in', 'Success!');
             this.router.navigateByUrl("/elearning/home");
           }
         else {
           this.showAlert=true;
         }
       }
+
 
     });
   }

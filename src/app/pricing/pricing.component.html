@@ -1,0 +1,116 @@
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo mr-auto"><a href="index.html">Saidi-Learning</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li ><a routerLink="/elearning/home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a routerLink="/elearning/courses">Courses</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+        <li class="drop-down"><a href="">Profile ({{username}})</a>
+          <ul>
+            <li><a routerLink="/elearning/profile">My Profile</a></li>
+            <li><a routerLink="/elearning/mycourses">My Courses</a></li>
+          </ul>
+        </li>
+        <a routerLink="/elearning/courses" class="get-started-btn">Get Started</a>
+      </ul>
+
+    </nav><!-- .nav-menu -->
+
+    <button  class="get-started-btn" (click)="logout()">Logout</button>
+
+  </div>
+</header>
+
+
+
+<main id="main">
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs" >
+    <div class="container">
+      <h2>Pricing</h2>
+    </div>
+  </div>
+<section id="pricing" class="pricing">
+  <div class="container" >
+
+    <div class="row">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="box">
+          <h3>Free</h3>
+          <h4><sup>$</sup>0<span> / month</span></h4>
+          <ul>
+            <li>PDF COURSES</li>
+            <li>BASICS</li>
+            <li class="na">Tutorials</li>
+            <li class="na">Advanced learning</li>
+          </ul>
+          <div class="btn-wrap">
+            <button (click)="Participate()" class="btn-buy">Participate Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+        <div class="box featured">
+          <h3>Business</h3>
+          <h4><sup>$</sup>{{course.price/4}}<span> / month</span></h4>
+          <ul>
+            <li>PDF COURSES</li>
+            <li>BASICS</li>
+            <li >TUTORIALS</li>
+            <li class="na">Advanced learning</li>
+          </ul>
+          <div class="btn-wrap">
+            <a href="#" class="btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+        <div class="box">
+          <h3>Developer</h3>
+          <h4><sup>$</sup>{{course.price/2}}<span> / month</span></h4>
+          <ul>
+            <li>PDF COURSES</li>
+            <li>BASICS</li>
+            <li >TUTORIALS</li>
+            <li>ADVANCED LEARNING</li>
+          </ul>
+          <div class="btn-wrap">
+            <a href="#" class="btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+        <div class="box">
+          <span class="advanced">Advanced</span>
+          <h3>Ultimate</h3>
+          <h4><sup>$</sup>{{this.course.price}}<span> / month</span></h4>
+          <ul>
+            <li>PDF COURSES</li>
+            <li>BASICS</li>
+            <li >TUTORIALS</li>
+            <li>SPEACIAL AND ADVANCED CHAPTERS</li>
+
+          </ul>
+          <div class="btn-wrap">
+            <a href="#" class="btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Pricing Section -->
+
+</main>

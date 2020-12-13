@@ -36,7 +36,7 @@
     {
       "id": 3892897074055800,
       "lastname": "Saidi",
-      "firstname": "saidi",
+      "firstname": "Ahmed",
       "username": "SaidiAhmed",
       "email": "player.saidi@esprit.tn",
       "role": "User",
@@ -55,13 +55,13 @@
       "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
       "category": "Web Development",
       "image": "course-1.jpg",
-      "likes": 11
+      "likes": 12
     },
     {
       "id": 2,
       "courseName": "Search Engine Optimization",
       "price": 250,
-      "mumbParticipants": 3,
+      "mumbParticipants": 1,
       "seats": 46,
       "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
       "category": "Marketing",
@@ -69,80 +69,62 @@
       "likes": 13
     },
     {
-      "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "description": "Discover the secrets of copywriting success from the master. From novice to pro in easy stages",
       "id": 3,
-      "courseName": "Website Design",
+      "courseName": "Copywriting",
       "seats": 3,
       "price": "250",
-      "category": "Web",
+      "category": "Content",
       "image": "course-3.jpg",
       "mumbParticipants": 3,
-      "likes": 1
+      "likes": 4
     }
   ],
   "participation": [
     {
-      "idUser": 3,
-      "idCourse": 2,
-      "courseName": "Search Engine Optimization",
-      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
-      "image": "course-2.jpg",
-      "category": "Marketing",
-      "id": 1
-    },
-    {
       "idUser": 2,
       "idCourse": 3,
-      "courseName": "Website Design",
-      "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "courseName": "Copywriting",
+      "description": "Discover the secrets of copywriting success from the master. From novice to pro in easy stages",
       "image": "course-3.jpg",
-      "category": "Web",
-      "id": 2
-    },
-    {
-      "idUser": 3,
-      "idCourse": 3,
-      "courseName": "Website Design",
-      "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
-      "image": "course-3.jpg",
-      "category": "Web",
-      "id": 3
+      "category": "Content",
+      "id": 8
     },
     {
       "idUser": 3892897074055800,
+      "idCourse": 3,
+      "courseName": "Copywriting",
+      "description": "Discover the secrets of copywriting success from the master. From novice to pro in easy stages",
+      "image": "course-3.jpg",
+      "category": "Content",
+      "id": 9
+    },
+    {
+      "idUser": 3,
       "idCourse": 1,
       "courseName": "Website Design",
       "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
       "image": "course-1.jpg",
       "category": "Web Development",
-      "id": 6
+      "id": 12
     },
     {
-      "idUser": 1,
+      "idUser": 3,
+      "idCourse": 2,
+      "courseName": "Search Engine Optimization",
+      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
+      "image": "course-2.jpg",
+      "category": "Marketing",
+      "id": 13
+    },
+    {
+      "idUser": 3,
       "idCourse": 3,
-      "courseName": "Website Design",
-      "description": "rrrrazzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "courseName": "Copywriting",
+      "description": "Discover the secrets of copywriting success from the master. From novice to pro in easy stages",
       "image": "course-3.jpg",
-      "category": "Web",
-      "id": 7
-    },
-    {
-      "idUser": 3892897074055800,
-      "idCourse": 2,
-      "courseName": "Search Engine Optimization",
-      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
-      "image": "course-2.jpg",
-      "category": "Marketing",
-      "id": 8
-    },
-    {
-      "idUser": 2,
-      "idCourse": 2,
-      "courseName": "Search Engine Optimization",
-      "description": "Looking for the best online web design courses? Seek no further! Taking you step-by-step on the basics of creating webpages and websites to teaching the latest in advanced programming languages such as HTML, JavaScript, CSS, Python and HTML5",
-      "image": "course-2.jpg",
-      "category": "Marketing",
-      "id": 9
+      "category": "Content",
+      "id": 14
     }
   ]
 }

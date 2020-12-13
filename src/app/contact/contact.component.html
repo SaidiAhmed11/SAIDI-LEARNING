@@ -1,0 +1,110 @@
+<header id="header" class="fixed-top">
+<div class="container d-flex align-items-center">
+
+  <h1 class="logo mr-auto"><a href="index.html">Saidi-Learning</a></h1>
+  <!-- Uncomment below if you prefer to use an image logo -->
+  <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+  <nav class="nav-menu d-none d-lg-block">
+    <ul>
+      <li ><a routerLink="/elearning/home">Home</a></li>
+      <li><a routerLink="/elearning/courses">Courses</a></li>
+
+      <li class="active"><a routerLink="/elearning/contact">Contact</a></li>
+      <li class="drop-down"><a href="">Profile ({{username}})</a>
+        <ul>
+          <li><a routerLink="/elearning/profile">My Profile</a></li>
+          <li><a routerLink="/elearning/mycourses">My Courses</a></li>
+        </ul>
+      </li>
+      <a routerLink="/elearning/courses" class="get-started-btn">Get Started</a>
+    </ul>
+
+  </nav><!-- .nav-menu -->
+
+  <button  class="get-started-btn" (click)="logout()">Logout</button>
+
+</div>
+</header>
+
+
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <h2>Contact Us</h2>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div >
+      <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1739.660319015621!2d10.185355741419613!3d36.90108761044815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2stn!4v1607855619144!5m2!1sfr!2stn" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="container" >
+
+      <div class="row mt-5">
+
+        <div class="col-lg-4">
+          <div class="info">
+            <div class="address">
+              <i class="icofont-google-map"></i>
+              <h4>Location:</h4>
+              <p>Petite Ariana</p>
+            </div>
+
+            <div class="email">
+              <i class="icofont-envelope"></i>
+              <h4>Email:</h4>
+              <p>ahmed.saidi@esprit.tn</p>
+            </div>
+
+            <div class="phone">
+              <i class="icofont-phone"></i>
+              <h4>Call:</h4>
+              <p>+216 20 566 666</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 mt-5 mt-lg-0">
+
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->

@@ -4,6 +4,7 @@ import {Participation} from '../model/Participation';
 import {ParticipationService} from '../shared/participation.service';
 import {CourseService} from '../shared/course.service';
 import {Observable} from 'rxjs';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Component({
   selector: 'app-course',
@@ -17,7 +18,8 @@ export class CourseComponent implements OnInit {
   participatedUsers:Participation[]=[];
   participated:boolean=false;
 
-  constructor(private courseService: CourseService,private participationService:ParticipationService) { }
+  constructor(private courseService: CourseService,private participationService:ParticipationService,
+  private toastr: ToastrManager) { }
 
   ngOnInit(): void {
     this.participationService.getParticipations().
@@ -66,6 +68,7 @@ export class CourseComponent implements OnInit {
     this.participated=false;
     this.course.mumbParticipants--;
     this.participationService.deleteParticipation(this.participation).subscribe(res=>this.courseService.updateCourse(this.course.id,this.course).subscribe(next=>this.participationService.getParticipations().subscribe(res=>this.participatedUsers=res)));
+    this.toastr.infoToastr('', 'Canceled Participation');
 
   }
 

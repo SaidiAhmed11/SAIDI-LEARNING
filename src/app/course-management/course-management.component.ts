@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Course} from '../model/Course';
 import {CourseService} from '../shared/course.service';
 import {Router} from '@angular/router';
-
+import { ToastrManager } from 'ng6-toastr-notifications';
 @Component({
   selector: 'app-course-management',
   templateUrl: './course-management.component.html',
@@ -11,10 +11,20 @@ import {Router} from '@angular/router';
 export class CourseManagementComponent implements OnInit {
   coursesList:Course[];
   searchCourses:Course[];
-  constructor(private  coursesService:CourseService,private router:Router) { }
+  constructor(private  coursesService:CourseService,private router:Router,
+              private toastr: ToastrManager) { }
 
   ngOnInit(): void {
-    this.coursesService.getCoursesJson().subscribe(res=>{this.searchCourses=this.coursesList=res});
+    this.coursesService.getCoursesJson().subscribe(res=>{
+      this.searchCourses=this.coursesList=res
+      for(let i in this.searchCourses)
+      {
+        if((this.searchCourses[i].mumbParticipants-this.searchCourses[i].seats)==0)
+        {
+          this.toastr.warningToastr('No seats Available for '+this.searchCourses[i].courseName, 'Alert!');
+        }
+      }
+    });
   }
 
 
